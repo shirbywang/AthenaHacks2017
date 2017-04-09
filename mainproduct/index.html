@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AthenaHacks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="camerascript.js"></script>
+
+    <script src="gamescript.js"></script>
+    <!--    <script src="../VideoTest/jquery-2.1.4.js"></script>-->
+<!--    <script src="camerascript.js"></script>-->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="startGame()">
+
+    <div class="container-fluid">
+        <div class="row fill">
+            <div id="sidebar" class="col-sm-4 text-center">Sidebar
+                <video width="70%" autoplay></video>
+                <canvas id="canvas1" width="200" height="200"></canvas>
+            </div>
+
+            <div id="game" class="col-sm-8 text-center">
+                <button onclick="myGameArea.stop()">STOP</button>
+                <button onclick="refreshGame()">REFERESH</button></div>
+        </div>
+    </div>
+
+
+
+</body>
