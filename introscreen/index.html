@@ -21,15 +21,14 @@
         <p><b>FROWN</b> to duck</p>
         <p><b>NEUTRAL</b> to run</p>
 
-        <div id="button" onclick="startGame()">
-            <span id="play">PLAY</span>
+        <script type="text/javascript" src="/AthenaHacks2017/gameinjavascripthtml/index.html">
+            function start() {
+                startGame();
+            }
+        </script>
 
-            <script type="text/javascript">
-                function startGame() {
-                    console.log('hello world');
-                }
-            </script>
-            </span>
+        <div id="button" onclick="start()">
+            <span id="play">PLAY</span>
         </div>
 </body>
 
