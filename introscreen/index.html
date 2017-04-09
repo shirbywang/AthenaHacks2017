@@ -10,7 +10,7 @@
 
 <body>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    
+
     <header>
         <span id="title">Title of Game</span>
     </header>
@@ -21,15 +21,16 @@
         <p><b>FROWN</b> to duck</p>
         <p><b>NEUTRAL</b> to run</p>
 
-        <div id="button" onclick="startGame()">
-            <span id="play">PLAY</span>
+        <script>
+            function start() {
+                window.location.href = "../maingame/index.html";
+            }
 
-            <script type="text/javascript">
-                function startGame() {
-                    console.log('hello world');
-                }
-            </script>
-        </span>
+        </script>
+
+        <div id="button" onclick="start()">
+            <span id="play">PLAY</span>
+        </div>
     </div>
 </body>
 
