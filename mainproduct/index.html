@@ -8,30 +8,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../gameinjavascripthtml/script.js"></script>
-    <!--    <script src="../VideoTest/jquery-2.1.4.js"></script>-->
-    <script src="../VideoTest/script.js"></script>
+    <script src="camerascript.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script src="gamescript.js"></script>
+    <!--    <script src="../VideoTest/jquery-2.1.4.js"></script>-->
+    <!--    <script src="camerascript.js"></script>-->
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="startGame()">
 
     <div class="container-fluid">
         <div class="row fill">
-            <div id="sidebar" class="col-sm-4 text-center">Sidebar
+            <div id="sidebar" class="col-sm-4 text-center">
+
                 <video width="70%" autoplay></video>
                 <canvas id="canvas1" width="200" height="200"></canvas>
-                <span id="capture-button" clickon="paintCanvas()">Capture</span>
-                <span id="use-this">Use this</span>
-
             </div>
 
-            <div id="game" class="col-sm-8 text-center"><button onclick="jump()">JUMP</button>
-                <!--<button onmousedown="movedown()" onmouseup="stopMove()">DOWN</button>-->
-                <button onclick="duck()">DUCK</button>
-                <button onclick="myGameArea.stop()">STOP</button>
-                <button onclick="refreshGame()">REFERESH</button></div>
+            <div id="game" class="col-sm-8 text-center">
+                <p id="stopbutton" onclick="myGameArea.stop()">STOP</p>
+                <p id="refresh" onclick="refreshGame()">REFRESH</p>
+            </div>
         </div>
     </div>
 

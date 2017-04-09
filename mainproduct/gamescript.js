@@ -9,6 +9,7 @@ var jumpHeight = 50;
 var duckHeight = 30;
 var startY = 310;
 var startHeight = 60;
+var sentiment;
 
 var myGameArea = {
     canvas: document.createElement("canvas"),
@@ -17,11 +18,11 @@ var myGameArea = {
         this.canvas.width = 600;
         this.canvas.height = 400;
         this.context = this.canvas.getContext("2d");
-        //        document.getElementById("game").appendChild(canvas);
+//        document.getElementById("game").appendChild(canvas);
+//                document.body.insertBefore(this.canvas, document.body.childNodes[1]);
+//                var c = document.body.childNodes;
+//                console.log(c)
         div.appendChild(this.canvas);
-        //        document.body.insertBefore(this.canvas, document.body.childNodes[1][0]);
-        //        var c = document.body.childNodes;
-        //        console.log(c)
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, startInterval);
     },
@@ -32,6 +33,7 @@ var myGameArea = {
         clearInterval(this.interval);
     }
 }
+
 
 function startGame() {
     myGamePiece = new component(30, 60, "red", 10, 310);
@@ -116,24 +118,31 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(200)) {
+    if (myGameArea.frameNo == 1 || everyinterval(400)) {
         x = myGameArea.canvas.width;
-        //        minHeight = 20;
-        //        maxHeight = 200;
-        //        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        //        minGap = 80;
-        //        maxGap = 200;
-        //        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+     
         whichObstacle = Math.random();
         //Randomly determine which obstacle pops up
-        if (whichObstacle > 0.5) {
+        if (whichObstacle > 0.5) { //Happiness
             myObstacles.push(new component(30, 60, "green", x, 350));
-        } else {
-            myObstacles.push(new component(50, 30, "orange", x, 300));
+        } else { //Sadness
+            myObstacles.push(new component(50, 30, "blue", x, 300));
         }
-        //        myObstacles.push(new component(10, height, "green", x, 0));
-        //        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+        
     }
+    if (myGameArea.frameNo == 1 || everyinterval(50)){
+        sentiment = takeAndAnalyzePicture();
+//        alert("Hello World " + sentiment);
+        
+        if (sentiment > 0){
+            jump();
+        }
+        else if (sentiment < 0){
+            duck();
+        }
+        
+    }
+    
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += -1;
         myObstacles[i].update();
@@ -179,5 +188,5 @@ function stand() {
 }
 
 function refreshGame() {
-    location.reload();
+    window.location.reload(true);
 }

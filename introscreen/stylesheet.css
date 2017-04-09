@@ -13,21 +13,12 @@ html {
 }
 
 header {
-    background-color: #7ab4b0;
-}
-
-#title {
-    font-size: 4em;
-    letter-spacing: 5px;
-}
-
-#subtitle {
-    font-size: 1em;
+    font-size: 3em;
 }
 
 #intro-box {
-    background-color: #ffcc3f;
-    padding-bottom: 20px;
+    background-color: #ffb6c1;
+    padding: 20px;
 }
 
 #button {
@@ -37,6 +28,6 @@ header {
 #play {
     color: white;
     font-weight: bold;
-    background-color: #fc7e01;
+    background-color: #a7bc4d;
     padding: 20px;
 }
