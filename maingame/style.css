@@ -1,0 +1,16 @@
+html,body{
+	height: 100%;
+}
+
+#sidebar {
+	background-color:lavender; 
+}
+
+#game {
+	background-color: pink;
+}
+
+.fill{
+	min-height: 100%;
+}
+
