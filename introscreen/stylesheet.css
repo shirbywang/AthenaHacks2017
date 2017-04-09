@@ -17,7 +17,7 @@ header {
 }
 
 #intro-box {
-    background-color: lightblue;
+    background-color: #ffb6c1;
     padding: 20px;
 }
 
@@ -28,6 +28,6 @@ header {
 #play {
     color: white;
     font-weight: bold;
-    background-color: orange;
+    background-color: #a7bc4d;
     padding: 20px;
 }
