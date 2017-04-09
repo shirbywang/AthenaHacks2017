@@ -32,3 +32,15 @@ body {
 #game {
     background-color: #a7bc4d;
 }
+
+#stopbutton,
+#refresh {
+    margin-left: 350px;
+    background-color: aqua;
+    width: 100px;
+    padding: 5px 10px;
+}
+
+#stopbutton {
+    margin-top: 50px;
+}
