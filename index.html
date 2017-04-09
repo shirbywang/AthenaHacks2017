@@ -1,24 +1,37 @@
+<!-- First screen - menu -->
+
 <!DOCTYPE html>
-<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>EMOTION GAME/title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
 </head>
+
 <body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-<h1> send help </h1>
+    <header>
+        <span id="title">smile<img src="icon.png" style="25px:25px;25px:25px;">run</span><br>
+        <span id="subtitle">made at AthenaHacks 2017!</span>
+    </header>
 
+    <div id="intro-box">
+        <p><b>Instructions:</b></p>
+        <p><b>SMILE</b> to jump</p>
+        <p><b>FROWN</b> to duck</p>
+        <p><b>NEUTRAL</b> to run</p>
 
-<script>
+        <script>
+            function start() {
+                window.location.href = "mainproduct/index.html";
+            }
+        </script>
 
-
-
-
-</script>
-
-
+        <div id="button" onclick="start()">
+            <span id="play">PLAY</span>
+        </div>
+    </div>
 </body>
+
 </html>
-
-
-
