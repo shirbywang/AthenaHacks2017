@@ -69,6 +69,15 @@ if (navigator.getUserMedia) {
                //code to show result will be here
                 alert("hello "+ data[0].scores.happiness);
                 console.log("hello" + result);
+                var sentiment;
+                if (data[0].scores.happiness > data[0].scores.sadness){
+                    sentiment = data[0].scores.happiness;
+                }
+                else{
+                    sentiment = data[0].scores.sadness;
+                }
+                
+                
             }
             })
             .fail(function(data) {
