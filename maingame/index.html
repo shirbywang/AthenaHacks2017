@@ -9,7 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="photo.js"></script>
 </head>
 
 <body>
@@ -17,7 +16,8 @@
     <div class="container-fluid">
         <div class="row fill">
             <div id="sidebar" class="col-sm-4 text-center">Sidebar
-                <video width=400 height=400 id="video" controls autoplay></video>
+                <video onclick="snapshot(this);" width=400 height=400 id="video" controls autoplay></video>
+                <canvas id="myCanvas" width="400" height="400"></canvas>
 
             </div>
 
@@ -26,5 +26,6 @@
     </div>
 
 
+    <script type="text/javascript" src="photo.js"></script>
 
 </body>
