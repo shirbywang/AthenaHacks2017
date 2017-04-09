@@ -1,0 +1,17 @@
+video, canvas {
+  background: #f9f9f9;
+  border: solid 1px #f1f1f1;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+span {
+  display: inline-block;
+  background: tomato;
+  padding: 10px;
+  margin: 20px 0;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+}
