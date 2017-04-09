@@ -13,13 +13,15 @@ var startHeight = 60;
 var myGameArea = {
     canvas: document.createElement("canvas"),
     start: function () {
+        div = document.getElementById("game");
         this.canvas.width = 600;
         this.canvas.height = 400;
         this.context = this.canvas.getContext("2d");
-//        document.getElementById("game").appendChild(canvas);
-                document.body.insertBefore(this.canvas, document.body.childNodes[1]);
-//                var c = document.body.childNodes;
-//                console.log(c)
+        //        document.getElementById("game").appendChild(canvas);
+        div.appendChild(this.canvas);
+        //        document.body.insertBefore(this.canvas, document.body.childNodes[1][0]);
+        //        var c = document.body.childNodes;
+        //        console.log(c)
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, startInterval);
     },
@@ -30,7 +32,6 @@ var myGameArea = {
         clearInterval(this.interval);
     }
 }
-
 
 function startGame() {
     myGamePiece = new component(30, 60, "red", 10, 310);
