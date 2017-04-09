@@ -9,6 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../gameinjavascripthtml/script.js"></script>
+    <!--    <script src="../VideoTest/jquery-2.1.4.js"></script>-->
+    <script src="../VideoTest/script.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,8 +20,10 @@
     <div class="container-fluid">
         <div class="row fill">
             <div id="sidebar" class="col-sm-4 text-center">Sidebar
-                <video width=400 height=400 id="video" controls autoplay></video>
-                <canvas id="myCanvas" width="400" height="250"></canvas>
+                <video width="70%" autoplay></video>
+                <canvas id="canvas" width="200" height="200"></canvas>
+                <span id="capture-button" clickon="paintCanvas()">Capture</span>
+                <span id="use-this">Use this</span>
 
             </div>
 
@@ -31,6 +36,5 @@
     </div>
 
 
-    <script type="text/javascript" src="photo.js"></script>
 
 </body>
