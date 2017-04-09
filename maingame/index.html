@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../gameinjavascripthtml/script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="startGame()">
 
     <div class="container-fluid">
         <div class="row fill">
             <div id="sidebar" class="col-sm-4 text-center">Sidebar
-                <video onclick="snapshot(this);" width=400 height=400 id="video" controls autoplay></video>
-                <canvas id="myCanvas" width="400" height="400"></canvas>
+                <video width=400 height=400 id="video" controls autoplay></video>
+                <canvas id="myCanvas" width="400" height="250"></canvas>
 
             </div>
 
-            <div id="game" class="col-sm-8 text-center">Game</div>
+            <div id="game" class="col-sm-8 text-center"><button onclick="jump()">JUMP</button>
+                <!--<button onmousedown="movedown()" onmouseup="stopMove()">DOWN</button>-->
+                <button onclick="duck()">DUCK</button>
+                <button onclick="myGameArea.stop()">STOP</button>
+                <button onclick="refreshGame()">REFERESH</button></div>
         </div>
     </div>
 
