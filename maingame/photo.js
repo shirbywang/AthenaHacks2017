@@ -5,7 +5,7 @@ navigator.getUserMedia = (navigator.getUserMedia ||
 
 var video;
 var webcamStream;
-var canvas, ctx;
+var canvas;
 
 function startWebcam() {
     if (navigator.getUserMedia) {
@@ -46,20 +46,25 @@ function init() {
 
 function getImages() {
 
-    for (i = 0; i < 50; i++) {
-        console.log(i);
-
+    for (var i = 0; i < 1; i++) {
         setTimeout(function () {
             canvas = document.getElementById("myCanvas");
-            ctx = canvas.getContext('2d');
-            snapshot();
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            var uri = canvas.toDataURL('image/png')
+            var res = encodeURI(uri);
+            console.log(res);
         }, 10000);
     }
+
 }
 
 function snapshot() {
     // Draws current image from the video element into the canvas
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    //    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    //    callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
+    //    callback(ctx.toDataURL('image/png'));
+    //    console.log(ctx.toDataURL('image/png'));
+
     alert("NEW PHOTO");
 }
 window.onload = init();
