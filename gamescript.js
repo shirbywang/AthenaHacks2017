@@ -18,10 +18,6 @@ var myGameArea = {
         this.canvas.width = 600;
         this.canvas.height = 400;
         this.context = this.canvas.getContext("2d");
-//        document.getElementById("game").appendChild(canvas);
-//                document.body.insertBefore(this.canvas, document.body.childNodes[1]);
-//                var c = document.body.childNodes;
-//                console.log(c)
         div.appendChild(this.canvas);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, startInterval);
@@ -74,9 +70,6 @@ function component(width, height, color, x, y) {
         } else if (!jumping && this.y != startY && !ducking) {
             this.y += jumpHeight;
         }
-
-        //        this.x += this.speedX;
-        //        this.y += this.speedY;
     }
     this.crashWith = function (otherobj) {
         var myleft = this.x;
@@ -118,7 +111,7 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(400)) {
+    if (myGameArea.frameNo == 1 || everyinterval(500)) {
         x = myGameArea.canvas.width;
      
         whichObstacle = Math.random();
@@ -126,13 +119,12 @@ function updateGameArea() {
         if (whichObstacle > 0.5) { //Happiness
             myObstacles.push(new component(30, 60, "green", x, 350));
         } else { //Sadness
-            myObstacles.push(new component(50, 30, "blue", x, 300));
+            myObstacles.push(new component(30, 30, "blue", x, 300));
         }
         
     }
     if (myGameArea.frameNo == 1 || everyinterval(50)){
         sentiment = takeAndAnalyzePicture();
-//        alert("Hello World " + sentiment);
         
         if (sentiment > 0){
             jump();
@@ -168,7 +160,7 @@ function stopMove() {
 function jump() {
     if (!jumping) {
         jumping = true;
-        setTimeout(land, 1000); // calls land function after 500 ms
+        setTimeout(land, 1700); // calls land function after 500 ms
     }
 }
 
@@ -179,7 +171,7 @@ function land() {
 function duck() {
     if (!ducking) {
         ducking = true;
-        setTimeout(stand, 1200)
+        setTimeout(stand, 2000)
     }
 }
 
