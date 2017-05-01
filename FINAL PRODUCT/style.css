@@ -1,0 +1,46 @@
+html,
+body {
+    height: 100%;
+}
+
+#container-fluid {
+    height: 100%;
+}
+
+.fill {
+    min-height: 100%;
+}
+
+.col-sm-4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.col-sm-8 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+#sidebar {
+    background-color: #ffcc3f;
+}
+
+#game {
+    background-color: #d0dfd2;
+}
+
+#stopbutton,
+#refresh {
+    margin-left: 350px;
+    background-color: aqua;
+    width: 100px;
+    padding: 5px 10px;
+}
+
+#stopbutton {
+    margin-top: 50px;
+}
